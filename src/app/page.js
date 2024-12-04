@@ -293,34 +293,34 @@ const EchoSurvival = () => {
                         <h3 className="text-lg font-semibold mb-4 text-center">How to Play</h3>
                         <div className="space-y-4">
                             <div className="flex items-center gap-3">
-                                <span className="text-zinc-400 text-lg">🎮</span>
+                                <span className="text-zinc-400 font-bold">•</span>
                                 <span>Use <kbd className="px-2 py-1 bg-zinc-700 rounded">←↑↓→</kbd> to move</span>
                             </div>
                             <div className="flex items-center gap-3">
-                                <span className="text-pink-500 text-lg">●</span>
-                                <span>Every {ECHO_DELAY} moves creates an echo that follows your path</span>
+                                <span className="text-zinc-400 font-bold">•</span>
+                                <span>Every {ECHO_DELAY} moves creates an <span className="text-pink-500 font-bold">echo</span> that follows your path</span>
                             </div>
                             <div className="flex items-center gap-3">
-                                <span className="text-amber-400 text-lg">●</span>
+                                <span className="text-zinc-400 font-bold">•</span>
                                 <span>Avoid colliding with <span className="text-pink-500 font-bold">echoes</span></span>
                             </div>
                             <div className="flex items-center gap-3">
-                                <span className="text-zinc-400 text-lg">💥</span>
+                                <span className="text-zinc-400 font-bold">•</span>
                                 <span>Collisions occur when moving to the same square simultaneously</span>
                             </div>
                             <div className="flex items-center gap-3">
-                                <span className="text-zinc-400 text-lg">🎯</span>
+                                <span className="text-zinc-400 font-bold">•</span>
                                 <span>Survive as long as possible to maximize your score</span>
                             </div>
                             <div className="flex items-center gap-3">
-                                <span className="text-zinc-400 text-lg">🔍</span>
+                                <span className="text-zinc-400 font-bold">•</span>
                                 <span>Toggle hints <Crosshair className="inline h-4 w-4" /> to see white arrows showing where each echo will move next</span>
                             </div>
                         </div>
                         <div className="mt-6 flex justify-center">
                             <button
                                 onClick={() => setShowInstructions(false)}
-                                className="px-6 py-2 bg-amber-400 hover:bg-amber-500 text-zinc-900 font-medium rounded-lg transition-colors shadow-lg"
+                                className="px-6 py-2 bg-zinc-700 hover:bg-zinc-600 text-zinc-300 font-medium rounded-lg transition-colors shadow-lg"
                             >
                                 Start Playing
                             </button>
