@@ -17,15 +17,19 @@ const EchoSurvival = () => {
     const [playerPos, setPlayerPos] = useState({ x: 0, y: 0 });
     const [moveHistory, setMoveHistory] = useState([]);
     const [score, setScore] = useState(0);
-    const [highScores, setHighScores] = useState(() => {
-        // Load high scores from localStorage on initial render
-        const savedScores = localStorage.getItem('echoes-high-scores');
-        return savedScores ? JSON.parse(savedScores) : {};
-    });
+    const [highScores, setHighScores] = useState({});
     const [gameState, setGameState] = useState('playing');
     const [showInstructions, setShowInstructions] = useState(true);
     const [showHints, setShowHints] = useState(false);
     const instructionsRef = useRef(null);
+
+    // Load high scores from localStorage on mount only
+    useEffect(() => {
+        const savedScores = localStorage.getItem('echoes-high-scores');
+        if (savedScores) {
+            setHighScores(JSON.parse(savedScores));
+        }
+    }, []);
 
     // Save high scores to localStorage whenever they change
     useEffect(() => {
