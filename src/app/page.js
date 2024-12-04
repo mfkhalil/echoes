@@ -357,7 +357,8 @@ const EchoSurvival = () => {
                                         {showHints && getNextEchoPositions().map(echo => {
                                             if (echo.current?.x === x && echo.current?.y === y) {
                                                 return (
-                                                    <div className="absolute inset-0">
+                                                    <div className="absolute inset-0" 
+                                                    key={echo.number}>
                                                         <DirectionIndicator
                                                             key={echo.number}
                                                             from={echo.current}
