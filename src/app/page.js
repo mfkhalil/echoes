@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { HelpCircle, Crosshair, RotateCcw } from "lucide-react";
+import { Analytics } from "@vercel/analytics/react"
 import {
     Tooltip,
     TooltipContent,
@@ -192,6 +193,7 @@ const EchoSurvival = () => {
 
     return (
         <div className="h-screen bg-zinc-900 flex items-center justify-center">
+            <Analytics/>
             <div className="relative max-w-lg w-full mx-auto p-4 flex flex-col items-center">
                 <div className="w-full text-center mb-8">
                     <h1 className="text-5xl font-bold mb-4 font-mono bg-gradient-to-r from-amber-300 to-pink-500 bg-clip-text text-transparent">
